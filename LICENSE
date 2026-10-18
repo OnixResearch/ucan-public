@@ -1,0 +1,12 @@
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+All new UCAN-owned source, including ucan-core, the root shell, optional adapters,
+contracts, schemas, owned fixtures/templates, documentation and policy, is offered
+under the GNU Affero General Public License, version 3 or (at your option) any
+later version. See LICENSES/AGPL-3.0-or-later.txt for the complete terms.
+
+Preserve existing copyright attribution and third-party notices. The immutable
+vendor/verified-logic snapshot retains its original MPL-2.0 terms, source identity
+and notices. Earlier effective grants, including grants for byte-identical
+material, remain valid; new owned contributions are not offered under MPL.
+See docs/licensing.md for the package, historical-grant and third-party boundary.

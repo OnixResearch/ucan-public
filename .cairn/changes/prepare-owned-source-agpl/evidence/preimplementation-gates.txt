@@ -1,0 +1,18 @@
+2026-10-17: proposal, design and tasks PASS, valid=true, issues=[] before product edits.
+Process cwd: /home/brittonr/git/OnixResearch/ucan
+Executable: /nix/store/9dfw87gh94yria6lx1xmclq489a875jw-cairn-0.1.0/bin/cairn
+Parent-identified cohort revision: 695124d459574ba7aeba6097310d237f393c243c
+Each command: EXECUTABLE gate STAGE prepare-owned-source-agpl --root . --policy cairn-policy/generated/cairn-policy.json
+Policy: cairn-default
+Policy hash: 9afa2cc9ec976a9d1860f9d8e6fa65438ba9ba964de9836cafd50dd3c37be5d1
+Proposal receipt: 6e13931ca53f439d48661ef86697c9f6267d7e3abf51a1bb32123402eb58d40c
+Design receipt: 3cd1c32508e56cf5ecfcd5e17bd85ad5d85eac6b80491f65413b2078baf6ae09
+Tasks receipt: 1e4c9fce79832e5837dcce6d48a9f0d8404587be6e485cf359279be07989326b
+
+This supersedes the runtime compatibility blocker for UCAN only. Repository policy was unchanged. Final licensing, packaging and immutable-snapshot checks are deferred to the parent; no final verification, spec sync or archive is claimed.
+
+After product preparation, added the explicit replacement license-boundary domain spec alongside the originally approved owned-source-agpl scope. Repeated proposal/design/tasks gates using the same executable, actual cwd and unchanged full local policy; all returned PASS with no issues.
+Proposal receipt: 9573fa096e89b5b2c92951baa80699dfd95b608461e5cd70c0e1f1aacf564707
+Design receipt: 06539edb5e0fb1579985f4ede307cc90442f62e8f7606fe803c12f95bb33ff3d
+Tasks receipt: f1199e64db88476179f97ae263120beb5bb3c51d73dac55488b520d68028eeb8
+These stage results are not final licensing, packaging or snapshot checks. Accepted license-boundary spec sync remains deferred until coordinated final validation.

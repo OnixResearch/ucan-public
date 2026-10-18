@@ -1,0 +1,26 @@
+# Build
+target/
+coverage/
+doc/
+vendor/verified-logic/target-test/
+
+# Nix
+result*
+!vendor/verified-logic/src/result.rs
+.direnv/
+.pi/
+
+# Agent state
+.agent/review-metrics.jsonl
+.hegel/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime
+*.redb
+*.sock
+data/

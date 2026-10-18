@@ -1,0 +1,24 @@
+UCAN prospective licensing source preparation — 2026-10-17
+
+Product files prepared:
+- LICENSE (new prospective owned-source grant; references existing complete AGPL text)
+- crates/ucan-core/Cargo.toml (AGPL-3.0-or-later)
+- crates/ucan-core/LICENSE (verbatim complete existing AGPL text)
+- license-policy.tsv (all owned packages AGPL; immutable snapshot remains MPL)
+- tools/check-license-boundary.rs (owned AGPL positive/stale-MPL negative; old MPL snapshot positive)
+- docs/licensing.md (all new owned surfaces, contribution authority, earlier byte-identical grants, exact immutable snapshot and non-claims)
+- README.md (only license paragraph; preexisting unrelated edits retained)
+
+No Rust public API, proof semantics, dependency/consumer revision/lock, snapshot bytes or snapshot revision was intentionally changed. The exact immutable snapshot remains Trellis 1f03111b92cc36aade07359c96773e086908c95f under its original MPL grant. No sync-verified-logic.sh invocation occurred.
+
+Native change specs prepare the replacement license-boundary domain and new owned-source-agpl requirements. Existing accepted spec and legacy lifecycle stores remain unchanged until coordinated final checks provide evidence for native sync. No migration or archival was performed. Implementation task checkmarks describe source preparation, not final verification.
+
+Final commands for parent, all with process cwd /home/brittonr/git/OnixResearch/ucan:
+rustc --edition=2024 tools/check-license-boundary.rs -o /tmp/ucan-license-boundary && /tmp/ucan-license-boundary .
+cargo metadata --locked --no-deps --format-version 1
+cargo package --list --allow-dirty -p ucan
+cargo package --list --allow-dirty -p ucan-core
+cargo package --list --allow-dirty -p ucan-nostr
+rustc scripts/check-verified-logic-josh-sync.rs -o /tmp/ucan-josh-sync && /tmp/ucan-josh-sync --source-repo ../trellis
+
+No builds, tests, lint, formatting, proof runs, metadata/package checks or snapshot checks were run during implementation. No Nickel projections required regeneration. Stage-gate results are in preimplementation-gates.txt; earlier incompatible-tool attempts remain historical in preimplementation-blocker.txt. Final validation and native accepted-spec sync/archive tasks remain unchecked.

@@ -1,0 +1,146 @@
+{
+  "schema": "ucan.owned-source-agpl.local-verification.v1",
+  "scope": "Prospective owned-source license metadata and retained immutable snapshot; not publication or legal clearance.",
+  "package_metadata": {
+    "owner": "ucan",
+    "packages": [
+      {
+        "name": "ucan-core",
+        "license": "AGPL-3.0-or-later",
+        "license_file": null,
+        "manifest": "/home/brittonr/git/OnixResearch/ucan/crates/ucan-core/Cargo.toml",
+        "source": null
+      },
+      {
+        "name": "ucan-nostr",
+        "license": "AGPL-3.0-or-later",
+        "license_file": null,
+        "manifest": "/home/brittonr/git/OnixResearch/ucan/crates/ucan-nostr/Cargo.toml",
+        "source": null
+      },
+      {
+        "name": "ucan",
+        "license": "AGPL-3.0-or-later",
+        "license_file": null,
+        "manifest": "/home/brittonr/git/OnixResearch/ucan/Cargo.toml",
+        "source": null
+      }
+    ]
+  },
+  "package_inclusion": {
+    "owner": "ucan",
+    "packages": [
+      {
+        "package": "ucan-core",
+        "exit": 0,
+        "license": "AGPL-3.0-or-later",
+        "included_license_files": [
+          "LICENSE"
+        ],
+        "error": null
+      },
+      {
+        "package": "ucan-nostr",
+        "exit": 0,
+        "license": "AGPL-3.0-or-later",
+        "included_license_files": [
+          "LICENSE"
+        ],
+        "error": null
+      },
+      {
+        "package": "ucan",
+        "exit": 0,
+        "license": "AGPL-3.0-or-later",
+        "included_license_files": [
+          "LICENSE"
+        ],
+        "error": null
+      }
+    ]
+  },
+  "license_guard": {
+    "owner": "ucan",
+    "exit": 0,
+    "stdout": "license boundary valid: 17 rules",
+    "error": null
+  },
+  "snapshot_check": {
+    "command": [
+      "rustc",
+      "--edition=2024",
+      "scripts/check-verified-logic-josh-sync.rs",
+      "-o",
+      "/dev/shm/kiln-agpl-tools/ucan-josh-sync"
+    ],
+    "execution": [
+      "/dev/shm/kiln-agpl-tools/ucan-josh-sync",
+      "--source-repo",
+      "../trellis"
+    ],
+    "exit": 0,
+    "observed": "vendor/verified-logic matches Trellis revision 1f03111b92cc36aade07359c96773e086908c95f using Josh filter josh/verified-logic.josh"
+  },
+  "native_gates": {
+    "owner": "ucan",
+    "change": "prepare-owned-source-agpl",
+    "results": [
+      {
+        "stage": "proposal",
+        "exit": 0,
+        "valid": true,
+        "verdict": "PASS",
+        "policy": "cairn-default",
+        "policy_hash": "9afa2cc9ec976a9d1860f9d8e6fa65438ba9ba964de9836cafd50dd3c37be5d1",
+        "input_hash": "4f09392f2b3e6c66b4c6ac6d5bb9868a62b257437f845a97ffee3e0237082299",
+        "receipt_hash": "d59492541323f924329004ffb6db3978a4a2e8a60081b5b532a13e4aa7b6a0ba",
+        "issues": [],
+        "error": null
+      },
+      {
+        "stage": "design",
+        "exit": 0,
+        "valid": true,
+        "verdict": "PASS",
+        "policy": "cairn-default",
+        "policy_hash": "9afa2cc9ec976a9d1860f9d8e6fa65438ba9ba964de9836cafd50dd3c37be5d1",
+        "input_hash": "2694f6c3d326606b6718a52bd07434d2dc5225ca09fd21ff97ce255b7d414016",
+        "receipt_hash": "b4bc430585c665610a861729d54449812a7b961ef1053928b94c2806936505d8",
+        "issues": [],
+        "error": null
+      },
+      {
+        "stage": "tasks",
+        "exit": 0,
+        "valid": true,
+        "verdict": "PASS",
+        "policy": "cairn-default",
+        "policy_hash": "9afa2cc9ec976a9d1860f9d8e6fa65438ba9ba964de9836cafd50dd3c37be5d1",
+        "input_hash": "3f72703718ef67cab78aaa92ff4e173fe8db73e9e6a0b97b9b0c3e06c126f78c",
+        "receipt_hash": "1c413e3ebe8d95661ca4971eae17cdc09c24ba7fe9db3931b4112f5fb8ebc2fb",
+        "issues": [],
+        "error": null
+      }
+    ]
+  },
+  "native_validation": {
+    "owner": "ucan",
+    "exit": 0,
+    "valid": true,
+    "issues": [],
+    "error": null
+  },
+  "corrected_sync_preview": {
+    "exit": 0,
+    "blocked": false,
+    "dry_run": true,
+    "mutated": false,
+    "receipt_hash": "dd60078b59af244f02042d10871a3d36436b1761c36b77b7cdaa51bdd08ba1e6",
+    "plan_hash": "c8d2e0cf34e6ae3bea34ed5fa808633981b28c3c92ed4a58ed87153347054065"
+  },
+  "limits": [
+    "Package inclusion was exercised with cargo package --list; no registry publication or binary build is claimed.",
+    "No imported snapshot, pin, lock, API, proof meaning or legacy lifecycle store was migrated.",
+    "No lifecycle archive, publication, signing or source-rights/privacy clearance is claimed."
+  ]
+}

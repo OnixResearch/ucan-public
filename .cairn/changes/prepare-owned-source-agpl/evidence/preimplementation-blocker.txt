@@ -1,0 +1,25 @@
+Preimplementation gate blocker — 2026-10-17
+
+Installed binary:
+/etc/profiles/per-user/brittonr/bin/cairn
+resolves to /nix/store/j3ni3lj66ylskpcg78ip531s9lz4z4av-cairn-0.1.0/bin/cairn
+
+Executed command (exit 1):
+/etc/profiles/per-user/brittonr/bin/cairn gate proposal prepare-owned-source-agpl --root /home/brittonr/git/OnixResearch/ucan --policy /home/brittonr/git/OnixResearch/ucan/cairn-policy/generated/cairn-policy.json
+
+Observed diagnostic:
+error: failed to parse policy /home/brittonr/git/OnixResearch/ucan/cairn-policy/generated/cairn-policy.json: cairn.workflow.profile.registry at workflow_profile_policy.schemas: initial workflow profile is missing: outcome-machine
+
+Design and tasks gates were not reached because proposal was chained with &&.
+An initial root-only proposal call returned PASS but selected kiln-default from the invoking working directory's legacy_default policy locator. That result is not accepted as local-policy gate evidence. No policy was modified or weakened.
+
+Required prerequisite:
+A Cairn runtime compatible with the repository's existing policy contract, or a separately reviewed owning-policy upgrade that preserves gate strength and source identity. Do not patch immutable upstream base bytes, substitute another repository's policy, or omit local policy to bypass this parser error.
+
+State:
+Only the native .cairn/changes/prepare-owned-source-agpl preparation package was created. No product metadata, source, grant, vendor snapshot, consumer pin/lock, accepted spec, archived grant or lifecycle store migration was changed by this attempt. All tasks remain unchecked. No builds, tests, proofs, lint, formatting, generation, sync, archive, publication or remote operations were run.
+
+Second candidate (correct process cwd: /home/brittonr/git/OnixResearch/ucan):
+/nix/store/1z6bhr2cl43z4kpsvjkxy9b47nqr9pkg-cairn-0.1.0/bin/cairn gate proposal prepare-owned-source-agpl --root . --policy cairn-policy/generated/cairn-policy.json
+Exit 1: error: failed to parse policy cairn-policy/generated/cairn-policy.json: cairn.workflow.profile.registry at workflow_profile_policy.schemas: initial workflow profile is missing: outcome-machine
+Design/tasks gates were not reached. Parent identifies this candidate's source as /nix/store/acchn2b5v9r308k3dc49fmwccalgkkpd-source, NAR sha256-Kgx8JgsC/+26ETbL3lRaxXAYfzv2cmtG/i9OywPOz0c=, declared Cairn revision 007ba5193dd8fec9067a1c0e0f8ef487807af872. This candidate is also incompatible; no policy or product changes followed.
